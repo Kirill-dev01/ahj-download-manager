@@ -43,14 +43,14 @@ export default class DownloadManager {
                 // 3. Добавляем к общей сумме
                 this.totalBytes += bytes;
 
-                // 4. Переводим байты в Мегабайты (1 MB = 1024 * 1024 байт)
+                // 4. Переводим байты в Мегабайты 
                 const mb = this.totalBytes / (1024 * 1024);
 
-                // Обновляем счетчик на экране (оставляем 5 знаков после запятой, т.к. файл крошечный)
+                // Обновляем счетчик на экране 
                 this.downloadedDisplay.textContent = mb.toFixed(5);
             });
 
-            this.tableBody.appendChild(tr);
+            this.tableBody.append(tr);
         });
     }
 }
